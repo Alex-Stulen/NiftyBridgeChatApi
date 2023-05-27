@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+
+  redis:
+    image: redis/redis-stack-server:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - app_network
+
+  web:
+    build:
+      context: ./nifty
+      dockerfile: Dockerfile
+    env_file:
+      - ./nifty/.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./nifty:/home/www/nifty
+    depends_on:
+      - redis
+    networks:
+      - app_network
+
+  tgbot:
+    build:
+      context: ./nifty_tg_bot
+      dockerfile: Dockerfile
+    env_file:
+      - ./nifty_tg_bot/.env
+    volumes:
+      - ./nifty_tg_bot:/home/www/nifty_tb_bot
+    depends_on:
+      - web
+    networks:
+      - app_network
+
+networks:
+  app_network:
