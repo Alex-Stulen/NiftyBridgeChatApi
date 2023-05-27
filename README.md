@@ -43,6 +43,17 @@ $ docker-compose up
 
 ---
 
+# ENV:
+Use this token telegram bot to test the functionality ```6148100626:AHrNFVeAvHjNuE66nCPIWDx-NH0MkMeTvE```
+Note that this token will soon be non-functional.
+
+---
+
+# Links:
++ [Telegram bot](https://t.me/NiftyBridgeChatBot)
+
+---
+
 # Demo:
 
 ## Nifty Web API:
