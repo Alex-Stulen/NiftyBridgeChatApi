@@ -35,6 +35,8 @@ The project of text information processing with the help of the model of the neu
 1. Clone project from github: ```git clone git@github.com:Alex-Stulen/NiftyBridgeChatApi.git```.
 2. Create **.env** files in **nifty** and **nifty_tb_bot** files by example **.env.sample** files.
 
+---
+
 # Startup project:
 ```shell
 $ cd NiftyBridgeChatApi 
